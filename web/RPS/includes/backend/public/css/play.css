@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'valorax';
+    src: url('/fonts/Valorax-lg25V.otf')  format('opentype');
+}
+
+@font-face {
+    font-family: Sora;
+    src: url('/fonts/Sora-VariableFont_wght.ttf');
+}
+
+
+body {
+    margin: 0;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/images/bg1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+
+/* .content {
+    display: flex;
+    flex-direction: column;
+} */
+
+.header {
+    font-family: 'valorax';
+    color: #7FFFD4;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 110px;
+}
+
+.game-content {
+    display: flex;
+    justify-content: space-around;
+    font-family: Sora;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+}
+
+/* .data {
+    display: flex;
+    gap: 10px;
+} */
+
+.data-card {
+    background-color: #7FFFD4;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    /* flex: 0 0 30%; */
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.score-header {
+    font-weight: 600;
+    font-size: 64px;
+}
+
+.scores {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.card {
+    height: 40%;
+}
+
+.score {
+    font-weight: 100;
+    font-size: 58px;
+}
+
+.name-header {
+    font-weight: 400;
+    font-size: 32px;
+    color: white;
+    background-color: #145B5B;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.moves-content {
+    background-color: #7FFFD4;
+    border-radius: 15px;
+    /* flex: 0 0 60%; */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.1s;
+    height: 100%;
+}
+
+.moves-header {
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 5%;
+}
+
+.moves {
+    display: flex;
+    gap: 50px;
+    justify-self: center;
+}
+
+.move {
+    background-color: black;
+    font-size: 48px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+.move:hover {
+    transform: scale(1.02);
+    box-shadow: 5px 5px #145B5B;
+}
+
+.result {
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.hide {
+    display: none;
+    opacity: 0;
+}
+
+.rules {
+    font-family: Sora;
+    font-size: 24px;
+    font-weight: 400;
+}

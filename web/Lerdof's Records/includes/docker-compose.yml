@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  backend:
+    container_name: backend_4
+    build: .
+    hostname: localhost
+    volumes:
+      - ./public-html/:/var/www/html/
+      - ./private-includes/:/var/www/includes/
+    ports:
+      - "8080:80"
+    

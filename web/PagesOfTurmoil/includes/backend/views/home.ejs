@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pages Of Turmoil</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left">Pages of Turmoil</div>
+        <div class="right">
+            <div class="link">
+                <a href=<%- `${origin}/bot` %>>Bot</a>
+            </div>
+            <div class="link">
+                <a href=<%- `${origin}/search` %>>Search</a>
+            </div>
+            <div class="link">
+                <a href=<%- `${origin}/logout` %>>Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="about">
+            <div class="about-header">About Us</div>
+            <div class="about-content">
+                Welcome to our online library service! We have a vast collection of books for all tastes and interests, from romance to science fiction, from self-help to comedy. Whether you're in the mood for a classic, a best-seller, or a hidden gem, we've got you covered. And if we don't have what you're looking for, just let us know and we'll add it to our collection. Our user-friendly platform makes it easy for you to browse, borrow, and return books from the comfort of your own home. Plus, our late fees are cheaper than therapy, so you don't have to feel guilty about keeping the book for a few extra days. Don't forget to check out our virtual events and book clubs, where you can connect with other book lovers and discuss your favorite reads. Happy reading!
+            </div>
+        </div>
+        <div class="books-header">Our Books</div>
+        <div class="books">
+            <% books.forEach(book => { %>
+                <div class="book">
+                    <div class="book-header">
+                        <div class="book-title"><%- book.name %></div>
+                        <div class="book-author">- <%- book.author %></div>
+                    </div>
+                    <div class="book-desc"><%- book.description %></div>
+                    <div class="button">Read Now</div> <!-- Need to add functionality -->
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  backend:
+    container_name: backend_1
+    build: ./backend
+    depends_on:
+      - db
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    restart: always
+    
+    
+    
+  db:
+    container_name: db
+    image: mongo:latest
+    env_file:
+      - .env
+    volumes:
+      - ./mongodata:/data/db
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: backend
+
+
+  xssbot:
+    container_name: xssbot
+    build: ./xssbot
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - backend
+    restart: always
+

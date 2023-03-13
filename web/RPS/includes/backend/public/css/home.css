@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'valorax';
+    src: url('/fonts/Valorax-lg25V.otf')  format('opentype');
+}
+
+@font-face {
+    font-family: Sora;
+    src: url('/fonts/Sora-VariableFont_wght.ttf');
+}
+
+
+body {
+    margin: 0;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/bg1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+
+.content {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.header {
+    font-family: 'valorax';
+    color: #7FFFD4;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 110px;
+}
+
+li, .logout {
+    font-family: Sora;
+    list-style: none;
+    background-color: #7FFFD4;
+    border-radius: 15px;
+    font-family: 'Sora';
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    padding: 5px 30px;
+    transition: all 0.5s;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+
+li:hover, .logout:hover {
+    box-shadow: 5px 10px rgb(20, 92, 92);
+    transform: scale(1.05);
+}
+
+
+ul {
+    margin-top: 200px;
+    padding: 0%;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.logout {
+    right: 1%;
+    top: 1%;
+    position: absolute;
+    justify-self: flex-start;
+}

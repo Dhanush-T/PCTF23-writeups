@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotify</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left">Quotify</div>
+        <div class="right">
+            <div class="link">
+                <a href="/">Home</a>
+            </div>
+            <div class="link">
+                <a href="/feedback">Feedback</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="quote-block">
+            BASED QUOTES JUST FOR YOU
+            <div class="quote-content"></div>
+            <button onclick="getQuote()">Get quote</button>
+        </div>
+    </div>
+    <script>
+        function formatQuote(data){
+            let quote_content = document.querySelector('.quote-content')
+            if(quote_content == undefined){
+                quote_content = document.createElement('div')
+                quote_content.classList.add('quote-content')
+                document.querySelector('body').appendChild(quote_content)
+            }
+            let quote = document.querySelector('.quote')
+            if(quote == undefined){
+                quote = document.createElement('div')
+                quote.classList.add('quote')
+                quote_content.insertBefore(quote, document.querySelector('.author'))
+            }
+            quote.innerHTML = '"' + data.quote + '"';
+    
+            let author = document.querySelector('.author')
+            if(author == undefined){
+                author = document.createElement('div')
+                author.classList.add('author')
+                quote_content.appendChild(author, document.querySelector('.quote'))
+            }
+            author.innerHTML = '-  ' + data.author;
+        }
+    
+        function getQuote(){
+            let temp_script = document.createElement('script')
+            temp_script.src  = `/quotes/${Math.floor(Math.random()*7)}?callback=formatQuote`
+            temp_script.id = 'jsonp'
+            let old_script = document.getElementById('jsonp')
+            if(old_script == undefined) {
+                document.querySelector('body').appendChild(temp_script)
+            }
+            else {
+                old_script.replaceWith(temp_script)
+            }
+    
+        }
+
+    </script>
+    
+</body>
+</html>

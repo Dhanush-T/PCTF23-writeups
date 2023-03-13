@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link rel="stylesheet" href="/css/play.css">
+    <link rel="stylesheet" href="/css/common.css">  
+    <script src="/scripts/play.js" defer></script>
+</head>
+<body>
+    <div class="nav">
+        <a href="../logout" class="logout button">Logout</a>
+        <a href="../" class="back button">Go Back</a>
+    </div>
+        <div class="header">ROCK, PAPER, <br> SCISSORS</div>
+        <div class="game-content">
+            <div class="data-card">
+                <div class="score-header">Score</div>
+                <div class="scores">
+                    <div class="player card">
+                        <div class="name-header">Player</div>
+                        <div class="player-score score">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="data-card">
+                <div class="score-header">CPU Choice</div>
+                <div class="scores">
+                    <div class="player card">
+                        <div class="player-score score choice">None</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="moves-content">
+                <div class="rules">Pick a choice and try to get your highest winning streak with the computer</div>
+                <div class="moves-header">Choose your Move</div>
+                <div class="moves">
+                    <div class="move">Rock</div>
+                    <div class="move">Paper</div>
+                    <div class="move">Scissors</div>
+                </div>
+                <div class="result">Tie!</div>
+            </div>
+        </div>
+        <div class="start button">Start Game!</div>
+</body>
+</html>

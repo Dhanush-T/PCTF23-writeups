@@ -1,0 +1,46 @@
+/* body {
+    position: re;
+} */
+
+.nav {
+    position: absolute;
+    top: 1%;
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.button {
+    font-family: Sora;
+    list-style: none;
+    background-color: #7FFFD4;
+    border-radius: 15px;
+    font-family: 'Sora';
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    padding: 5px 30px;
+    transition: all 0.5s;
+    color: black;
+}
+
+.button:hover{
+    box-shadow: 5px 10px rgb(20, 92, 92);
+    transform: scale(1.05);
+}
+
+.back {
+    position: relative;
+    right: 2%;
+}
+
+.logout {
+    position: relative;
+    left: 2%;
+}

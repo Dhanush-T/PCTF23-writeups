@@ -1,0 +1,84 @@
+@font-face {
+    font-family: Sora;
+    src: url('/fonts/Sora-VariableFont_wght.ttf');
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/bg1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color:aquamarine;
+    padding: 20px;
+    border: 0px solid black;
+    border-radius: 8%;
+    font-size: 48px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+form:hover {
+    box-shadow: 15px 15px rgb(20, 92, 92);
+}
+
+#header {
+    margin-bottom: 32px;
+    font-family: Sora;
+    font-weight: 700;
+
+}
+
+input {
+    outline: none;
+    border: 0px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 22px;
+    font-family: Sora;
+    transition: all 0.5s;
+}
+
+input:focus {
+    box-shadow: 5px 5px black;
+}
+
+button {
+    border: none;
+    font-family: Sora;
+    background-color: black;
+    color: aliceblue;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 22px;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    border: none;
+    font-family: Sora;
+    background-color: black;
+    color: aliceblue;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 22px;
+    padding: 10px;
+}
+

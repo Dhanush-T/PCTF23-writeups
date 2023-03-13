@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'valorax';
+    src: url('/fonts/Valorax-lg25V.otf')  format('opentype');
+}
+
+@font-face {
+    font-family: Sora;
+    src: url('/fonts/Sora-VariableFont_wght.ttf');
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+* {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+
+body {
+    margin: 0;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/bg1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+
+.content {
+    box-sizing: border-box;
+    background-color: #7FFFD4;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;  
+    width: 70%;
+    height: 80%;
+    align-items: center;
+    overflow-y: scroll;
+    padding-bottom: 5%;
+}
+
+.header {
+    font-family: 'Sora';
+    font-weight: 700;
+    font-size: 64px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    
+}
+
+th {
+    font-family: 'Sora';
+    font-weight: 400;
+    font-size: 40px;
+}
+
+td {
+    font-family: 'Sora';
+    font-weight: 400;
+    font-size: 24px;
+}
+
+table {
+    width: 60%;
+}
+
+

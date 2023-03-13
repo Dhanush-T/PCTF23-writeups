@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Got You</title>
+    {{{ SCRIPT }}}
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #3f51b5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: normal;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 50px auto;
+      max-width: 500px;
+    }
+
+    .lock-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .lock-container img {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+
+    #pin-form {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    #pin-form label {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    #pin-form input {
+      font-size: 20px;
+      padding: 5px;
+      width: 100px;
+    }
+
+    #pin-form button {
+      font-size: 20px;
+      padding: 5px 10px;
+      margin-left: 10px;
+      background-color: #3f51b5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #success-message {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    #success-message img {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+
+    #success-message p {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    footer {
+      background-color: #3f51b5;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  </style>
+
+  <script>
+    function validate() {
+      const enteredPin = document.getElementById("pin-input").value;
+      const result = Module.ccall(
+        "validateFlag",
+        "number",
+        ["string"],
+        [enteredPin]
+      );
+      console.log(enteredPin);
+      if (result == 1) {
+        console.log("Success")
+      } else {
+        alert("Incorrect PIN. Please try again.");
+      }
+    }
+  </script>
+
+  <body>
+    <header>
+      <h1>Key Lock</h1>
+    </header>
+
+    <main>
+      <div class="lock-container">
+        <img id="lock-image" src="./public/locked.png" alt="Locked" />
+        <form id="pin-form">
+          <label for="pin-input">Enter PIN:</label>
+          <input
+            type="password"
+            id="pin-input"
+            name="pin-input"
+            maxlength="8"
+          />
+          <button type="submit" onclick="validate()">Unlock</button>
+        </form>
+      </div>
+      <div id="success-message" class="hidden">
+        <img src="./public/unlocked.png" alt="Unlocked" />
+        <p>Success! The lock has been opened.</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; Made with &hearts; by Delta Force</p>
+    </footer>
+  </body>
+</html>

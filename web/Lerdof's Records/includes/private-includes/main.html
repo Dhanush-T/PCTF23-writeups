@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lerdof's Records</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            font-family: "Press Start 2P";
+            background-color: rgb(157, 255, 255);
+        }
+
+        .header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100vw;
+            padding: 30px 20px;
+            font-size: 32px;
+            font-weight: 700;
+            background-color: rgb(255, 98, 78);
+        }
+
+        h1 {
+            border-radius: 15px;
+            background-color: rgb(255, 242, 127);
+            padding: 20px 40px;
+        }
+        .content {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: rgb(75, 236, 102);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .form-header {
+            font-size: 32px;
+        }
+
+        input {
+            font-size: 20px;
+            padding: 5px 10px;
+            border-radius: 7px;
+            outline: none;
+            border: none;
+            transition: all 0.5s ease;
+        }
+
+        input:hover {
+            box-shadow: 5px 5px black;
+        }
+
+        button {
+            padding: 10px 50px;
+            border-radius: 15px;
+            border: none;
+            transition: all 0.5s ease;
+            font-family: "Press Start 2P";
+            font-size: 20px;
+        }
+
+        button:hover {
+            box-shadow: 5px 5px black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            Lerdof's Records
+        </div>
+    </div>
+    <div class="content">
+        <form method="post">
+            <div class="form-header">Login</div>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

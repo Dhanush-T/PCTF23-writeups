@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotify</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left">Quotify</div>
+        <div class="right">
+            <a href="/"> 
+                <div class="link">Home</div> 
+            </a>
+            <a href="/feedback"> 
+            <div class="link">Feedback</div> 
+            </a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="feedback">
+            <div class="feedback-header">FEEDBACK FORM</div>
+            <%- locals.flag %>
+            <form method="post" id="login-form">
+                <input type="text" name="quoteId" placeholder="Quote ID" required>
+                <textarea name="feedback" id="fb" cols="30" rows="10" placeholder="Feedback" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

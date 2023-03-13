@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link rel="stylesheet" href="/css/won.css">
+    <link rel="stylesheet" href="/css/common.css">  
+</head>
+<body>
+    <div class="nav">
+        <a href="../logout" class="logout button">Logout</a>
+        <a href="../" class="back button">Go Back</a>
+    </div>
+
+    <div class="header">ROCK, PAPER, <br> SCISSORS</div>
+    <div class="game-content">
+        <div class="result">The Computer finally beat you!</div>
+        <div class="end-text">Your Score is <%= locals.score %></div>
+        <div class="end-text">Your Highscore is <%= locals.highScore %> </div>  
+    </div>
+    <a href="/play" class="button">Restart Game!</a>
+
+</body>
+</html>

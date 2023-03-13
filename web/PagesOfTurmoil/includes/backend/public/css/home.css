@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Mono', monospace;
+    user-select: none;
+}
+
+.header {
+    height: 40px;
+    background-color: #AAAAAA;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    gap: 20px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 0px 50px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-header {
+    font-size: 44px;
+    font-weight: 900;
+}
+.about-content {
+    text-align: center;
+}
+
+.books-header {
+    font-size: 44px;
+    font-weight: 900;
+}
+
+.books {
+    height: 500px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.book {
+    background-color: #AAAAAA;
+    padding: 10px;
+    border-radius: 5px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-title {
+    font-weight: 800;
+}
+.book-author {
+    font-size: 12px;
+}
+
+.button {
+    padding: 5px 15px;
+    background-color: rgb(233, 99, 99);
+    transition: all 0.4s ease;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+
+.button:hover {
+    box-shadow: 4px 4px black;
+}
+
+.link {
+    transition: all 0.4s ease;
+    padding: 5px 8px;
+}
+
+.link:hover {
+    box-shadow: 2px 2px black;
+}

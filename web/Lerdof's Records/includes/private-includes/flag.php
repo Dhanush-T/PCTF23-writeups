@@ -1,0 +1,3 @@
+<?php
+define('FLAG', 'p_ctf{t83r35_n07hin6_l1k3_600d_p8p}');
+?>

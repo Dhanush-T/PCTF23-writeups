@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Got You</title>
+  </head>
+  <style>
+    /* Body styles */
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #f44336;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Navigation styles */
+    nav {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+    }
+
+    nav li {
+      margin: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Main content styles */
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    main h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    ol {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ol li {
+      font-size: 18px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    ol li:last-child {
+      border-bottom: none;
+    }
+
+    ol li a {
+      color: #333;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    ol li a:hover {
+      text-decoration: underline;
+      color: #f44336;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    form input[type="text"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 70%;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    form button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #333;
+      color: #fff;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .foot{
+        padding-top: 378px;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Music Downloads</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Music</a></li>
+        <li><a href="#">Artists</a></li>
+        <li><a href="#">Genres</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Top Downloads</h2>
+      <ol>
+        <li><a href="./public/gotyou1.mpeg" download>Space Song</a> - Beach House</li>
+        <li><a href="./public/gotyou2.mpeg" download>Byakkoya no Musume</a> - Susumu Hirasawa </li>
+        <li><a href="./public/gotyou3.mpeg" download>Why this Kolaveri di</a> -  DnA</li>
+      </ol>
+      <h2>Search for Music</h2>
+      <form>
+        <input type="text" placeholder="Search..." />
+        <button type="submit">Go</button>
+      </form>
+    </main>
+    <div class="foot">
+      <footer>
+        <p>&copy; 2023 Music Download Website</p>
+      </footer>
+    </div>
+  </body>
+</html>
